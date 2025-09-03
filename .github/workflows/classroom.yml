@@ -1,0 +1,100 @@
+name: Autograding Tests
+'on':
+- push
+- workflow_dispatch
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Setup
+      run: npm install
+      
+    - name: Submission
+      id: submission 
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "Submission (2pts)"
+        command: 'true' 
+        timeout: 10
+        max-score: 2 
+    
+    # 1) Nav and Footer CSS (3 pts)
+    - name: Nav and Footer CSS
+      id: nav-footer-css
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "CSS: Nav and Footer (3 pts)"
+        command: npm test .tests/nav-footer.test.js
+        timeout: 10
+        max-score: 3
+
+    # 2) Header Splash CSS (4 pts)
+    - name: Header Splash CSS
+      id: header-splash-css
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "CSS: Header Splash (4 pts)"
+        command: npm test .tests/header.test.js
+        timeout: 10
+        max-score: 4
+
+    # 3) Sections CSS (4 pts)
+    - name: Sections CSS
+      id: sections-css
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "CSS: Sections (4 pts)"
+        command: npm test .tests/sections.test.js
+        timeout: 10
+        max-score: 4
+
+    # 4) Project Cards CSS (3 pts)
+    - name: Project Cards CSS
+      id: project-cards-css
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "CSS: Project Cards (3 pts)"
+        command: npm test .tests/cards.test.js
+        timeout: 10
+        max-score: 3
+
+    # 5) Responsive CSS (2 pts)
+    - name: Responsive CSS
+      id: responsive-css
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "CSS: Responsive (2 pts)"
+        command: npm test .tests/responsive.test.js
+        timeout: 10
+        max-score: 2
+
+    # 6) Contact Page CSS (2 pts)
+    - name: Contact Page CSS
+      id: contact-page-css
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "CSS: Contact Page (2 pts)"
+        command: npm test .tests/contact.test.js
+        timeout: 10
+        max-score: 2
+
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        SUBMISSION_RESULTS: "${{ steps.submission.outputs.result }}"
+        NAV-FOOTER-CSS_RESULTS: "${{ steps.nav-footer-css.outputs.result }}"
+        HEADER-SPLASH-CSS_RESULTS: "${{ steps.header-splash-css.outputs.result }}"
+        SECTIONS-CSS_RESULTS: "${{ steps.sections-css.outputs.result }}"
+        PROJECT-CARDS-CSS_RESULTS: "${{ steps.project-cards-css.outputs.result }}"
+        RESPONSIVE-CSS_RESULTS: "${{ steps.responsive-css.outputs.result }}"
+        CONTACT-PAGE-CSS_RESULTS: "${{ steps.contact-page-css.outputs.result }}"
+      with:
+        runners: submission,nav-footer-css,header-splash-css,sections-css,project-cards-css,responsive-css,contact-page-css

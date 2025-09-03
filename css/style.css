@@ -1,0 +1,95 @@
+body {
+
+  }
+
+/****************   Nav Section **********************/
+nav {
+	
+}
+
+/***********************  Footer Section   **************************/
+footer {
+	
+}
+
+/*********** Splash Page ************************/
+header {
+
+}
+
+header h1 {
+  
+}
+
+header img {
+}
+
+.address {
+ 
+}
+
+.tagline {
+  
+}
+
+/************* Sections ********************/
+hr {
+
+}
+
+section h3 {
+  
+}
+
+section dl {
+  
+}
+
+section ul {
+
+}
+
+section a {
+
+}
+
+section a:hover {
+}
+
+/**************   Projects   *****************/
+.three-col {
+	
+}
+
+.card img {
+
+}
+
+.card {
+  
+}
+
+/**************   Responsiveness   *****************/
+@media (max-width: 680px) {
+    nav {
+      
+    }
+
+    .three-col {
+      
+    }
+}
+
+/**************   Contact Page   *****************/
+.one-col {
+
+}
+
+input {
+  
+
+}
+
+textarea {
+   
+}
