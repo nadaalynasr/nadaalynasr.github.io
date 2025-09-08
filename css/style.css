@@ -30,7 +30,19 @@ nav {
 footer {
   display: flex;
   justify-content: center;
-  font-family: "DM Sans", sans-serif;
+  color: #880112;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+
+footer p {
+  text-decoration: none;
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+
+footer p:hover {
+  background-color: #f79ca2;
 }
 
 /*********** Splash Page ************************/
@@ -100,50 +112,70 @@ hr {
   color: #880112;
 }
 
+
 section h3 {
+  display: flex;
   font-family: "Swanky and Moo Moo", cursive;
   font-size: 38px;
-  color: #202a9e;
-  padding-left: 10px;
+  color: #880112;
+  justify-content: center;
 }
 
 section h2 {
+  display: grid;
   font-family: "Swanky and Moo Moo", cursive;
   font-size: 38px;
-  color: #202a9e;
+  color: #880112;
   padding-left: 10px;
+  justify-content: center;
 }
 
 section dl {
   display: grid;
-  color: #202a9e
-  
+  gap: 4px 16px;
+  font-family: "Raleway", sans-serif;
+  color: #880112;
+  justify-content: center;
+  border-radius: 10px;
+  justify-content: center;
 }
 
+dt {
+  font-weight: bold;
+}
+
+dd{
+  grid-column-start: 2;
+}
 section ul {
-  font-family: "DM Sans", sans-serif;
-  display: flex;
+  font-family: "Raleway", sans-serif;
+  display: grid;
   list-style: none;
   gap: 10px;
-  flex-wrap: wrap;
-  max-width: 300px;
+  justify-content: center;
+  justify-items: center;
 }
 
 section ul li {
-  background-color: #202a9e;
-  color: white;
+  background-color: #880112;
+  color: #fffad9;
   padding: 8px 16px;
   border-radius: 20px;
+  max-width: fit-content;
+  align-items: center;
 }
 
 section a {
-  color: #202a9e;
+  color:#880112;
   text-decoration: none;
   font-weight: bold;
+  background-color: transparent;
+  transition: background-color 0.5s;
 }
 
 section a:hover {
   text-decoration: underline;
+  background-color: #f79ca2;
 
 }
 
@@ -151,8 +183,8 @@ section a:hover {
 .three-col {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-	margin: 10px;
+  gap: 10px;
+  margin: 10px;
 }
 
 .card img {
@@ -160,16 +192,16 @@ section a:hover {
   height: auto;
   display: block;
   border-radius: 8px;
-  border: 2px solid black;
+  border: 2px solid #880112;
 }
 
 .card {
   font-family: "DM Sans", sans-serif;
   width: 400px;
   padding: 20px;
-  background-color: #fbf3ec;
-  border: 6px solid black;
-  box-shadow: 12px 12px 0 black;
+  background-color: #fffad9;
+  border: 6px solid #880112;
+  box-shadow: 12px 12px 0 #880112;
   object-fit: cover;
   
 }
