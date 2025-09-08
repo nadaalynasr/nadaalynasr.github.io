@@ -1,95 +1,230 @@
 body {
-
+  padding: 0;
+  margin: 0;
+  background-color: #fffad9;
   }
 
 /****************   Nav Section **********************/
 nav {
-	
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 0.5rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  color: #fffad9;
 }
 
+.nav p {
+  padding: 0px 15px;
+  margin: 0;
+  background-color: #880112;
+  border-radius: 20px;
+}
+
+.nav a {
+  color: #fffad9;
+  text-decoration: none;
+  font-weight: 700;
+}
 /***********************  Footer Section   **************************/
 footer {
-	
+  display: flex;
+  justify-content: center;
+  font-family: "DM Sans", sans-serif;
 }
 
 /*********** Splash Page ************************/
 header {
+  display: flex;
+  width: 100%;
+  background-image:url("/images/splash_back.svg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
 
+  
+  font-family: "Swanky and Moo Moo", cursive;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+
+  color: #880112;
+  box-sizing: border-box;
+}
+
+header h2 {
+  padding: 0;
+  font-size: 100px;
+  max-width: 800px;
 }
 
 header h1 {
-  
+  font-family: "Swanky and Moo Moo", cursive;
+  /*padding: 10rem 0rem 0rem 2.5rem;*/
+  margin-top: 0;
+  font-size: 7.5rem;
+  color: #880112;
+  max-width: 50rem;
 }
 
 header img {
+  border-radius: 200px;
+  align-self: flex-start;
+  margin-bottom: -2rem;
+  margin-left: 10%;
+  margin-top: auto;
 }
 
 .address {
- 
+  font-size: 25px;
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+  margin: -4.5rem 0 0 -4.5rem;
+  max-width: 50rem;
+  text-align: center;
 }
 
 .tagline {
-  
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  justify-content: flex-end;
+  margin-top: auto;
+  margin-bottom: 3rem;
+  max-width: 75%
 }
 
 /************* Sections ********************/
 hr {
-
+  color: #880112;
 }
 
 section h3 {
-  
+  font-family: "Swanky and Moo Moo", cursive;
+  font-size: 38px;
+  color: #202a9e;
+  padding-left: 10px;
+}
+
+section h2 {
+  font-family: "Swanky and Moo Moo", cursive;
+  font-size: 38px;
+  color: #202a9e;
+  padding-left: 10px;
 }
 
 section dl {
+  display: grid;
+  color: #202a9e
   
 }
 
 section ul {
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 300px;
+}
 
+section ul li {
+  background-color: #202a9e;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
 }
 
 section a {
-
+  color: #202a9e;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 section a:hover {
+  text-decoration: underline;
+
 }
 
 /**************   Projects   *****************/
 .three-col {
-	
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+	margin: 10px;
 }
 
 .card img {
-
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 2px solid black;
 }
 
 .card {
+  font-family: "DM Sans", sans-serif;
+  width: 400px;
+  padding: 20px;
+  background-color: #fbf3ec;
+  border: 6px solid black;
+  box-shadow: 12px 12px 0 black;
+  object-fit: cover;
   
 }
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
     nav {
-      
+      flex-direction: column;
+      align-items: flex-start;
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     .three-col {
-      
+      display: grid;
+      grid-template-columns: 1fr;
     }
 }
 
 /**************   Contact Page   *****************/
 .one-col {
-
+  font-family: "DM Sans", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+  padding: 20px;
 }
 
 input {
-  
-
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  border: 1px solid #f79ca2;
+  border-radius: 4px;
 }
 
 textarea {
-   
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px;
+  border: 1px solid #f79ca2;
+  border-radius: 4px;
+
+}
+
+button  {
+  background-color: #f79ca2;
+  color: white;
+  padding: 8px 30px;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  margin: auto;
+  font-size: medium;
 }

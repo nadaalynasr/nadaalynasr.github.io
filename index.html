@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nada Aly-Nasr</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Nada Aly-Nasr</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Raleway:ital,wght@0,100..900;1,100..900&family=Swanky+and+Moo+Moo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
+    <nav class="nav">
         <p>Nada Aly-Nasr</p>
         <p>Contact <a href="contact.html">Nada Aly-Nasr</a></p>
     </nav>
-    <h1>Nada Aly-Nasr</h1>
-    <img src="images/headshot.jpeg" alt="headshot" width="300" height="300"/>
-    <p> 2705 Creek Tree Lane, Cumming, GA 30041 ✮ (678) 848-9988 ✮ nadaalynasr@gmail.com</p>
-    <p>I’m interested in the intersection of technology and the environment, with a passion for backend development and creative, 
-        user-centered design. I believe design and creativity have an important place in our world, and my goal is to work in tech where 
-        I can make a meaningful difference by building impactful products.</p>
-    <p></p>
+    <header class="header">
+        <img src="images/headshot.jpg" alt="headshot" width="300" height="300"/>
+        <h1>nada aly-nasr</h1>
+        <p class="address"> ✮ 1234 Address, Athens, GA 30605 ✮ (678) 999 8212 ✮ nadaalynasr@gmail.com ✮ </p> 
+        <p class="tagline">Coding with Conscience: Developing at the intersection of technology and the environment</p>
+    </header>
+    
 
     <hr>
     <!-- EDUCATION done-->
@@ -66,7 +70,8 @@
     <!-- PROJECTS done-->
      <section>
         <h2>Projects</h2>
-            <div>
+        <div class="three-col">
+            <div class="card">
                 <h3>GrowBeets Hacks X</h3>
                 <img src="images/proj_img1.png" alt="GrowBeets UI" width="500">
                 <ul>
@@ -75,7 +80,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="card">
                 <h3>Song Translator</h3>
                 <img src="images/proj_img2.png" alt="Song Translate UI" width="500"/>
                 <ul>
@@ -84,12 +89,13 @@
                 </ul>
             </div>
 
-                <div>
+                <div class="card">
                 <h3>Pong</h3>
                 <img src="images/proj_img3.png" alt="Pong UI" width="500"/>
                 <ul>
                     <li>Built with Unity in C#</li>
                 </ul>
+        </div>
     </div>
     </section>
 
